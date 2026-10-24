@@ -69,13 +69,13 @@ export default function ShoeHubHeroSection() {
         return {
           position: "absolute" as const,
           aspectRatio: "0.6 / 1",
-          transform: `translate(-50%, -50%) scale(${isMobile ? 1.15 : 1.45})`,
+          transform: `translate(-50%, -50%) scale(${isMobile ? 1.05 : 1.25})`,
           filter: "none",
           opacity: 1,
           zIndex: 20,
           left: "50%",
-          top: "50%",
-          height: isMobile ? "54%" : "70%",
+          top: "48%",
+          height: isMobile ? "50%" : "62%",
           transition: baseTransition,
           willChange: "transform, filter, opacity",
         };
@@ -223,28 +223,6 @@ export default function ShoeHubHeroSection() {
             >
               <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2.25} />
             </button>
-          </div>
-
-          {/* Slide Indicator Pills */}
-          <div className="flex items-center gap-2 mt-4 sm:mt-5">
-            {IMAGES.map((item, idx) => (
-              <button
-                key={item.src}
-                onClick={() => {
-                  if (!isAnimating) {
-                    setIsAnimating(true);
-                    setActiveIndex(idx);
-                    setTimeout(() => setIsAnimating(false), 650);
-                  }
-                }}
-                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  idx === activeIndex
-                    ? "w-8 bg-white shadow-xs"
-                    : "w-2.5 bg-white/40 hover:bg-white/75"
-                }`}
-                aria-label={`Go to ${item.name} Figurine`}
-              />
-            ))}
           </div>
         </div>
 

@@ -73,7 +73,7 @@ export default function CustomizerSection() {
   return (
     <section
       id="customizer"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-[#DCE8DE]/30 border-y border-[#DCE8DE] relative"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-[#DCE8DE]/30 border-b border-[#DCE8DE] relative"
     >
       <div className="max-w-7xl mx-auto">
         
